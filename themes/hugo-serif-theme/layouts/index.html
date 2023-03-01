@@ -1,0 +1,77 @@
+{{ define "body_classes" }}page-home{{ end }}
+
+{{ define "main" }}
+<div class="intro">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+        {{ .Content }}
+        {{ if .Site.Params.homepage.show_contact_box }}
+        <div class="call-box-bottom">
+          <a href="{{ .Params.link | relURL }}" class="button"> Find your perfect assistant today!</a>
+        </div>
+        {{ end }}
+      </div>
+      {{ if .Params.intro_image }}
+      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+        <img alt={{ .Title }}
+          class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
+          src="{{ .Params.intro_image | relURL }}" />
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+{{if .Site.Data.bloque1}}
+<div class="strip" style="background-color: #f5f5f5;">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-center">
+        {{ range .Site.Data.bloque1 }}
+        {{ if eq .image_alignment "right" }}
+        <div class="strip" style="background-color: #f5f5f5;">
+          <div class="container row justify-content-start  pt-1 pb-1 pt-md-5 pb-md-5">
+            <div class="row justify-content-start">
+              <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1 text-center text-md-start">
+                <p style="font-size: 20px;">{{ .description }}</p>
+                {{ if .link_b }}
+                <a href="{{ .Params.link | relURL }}" class="button"> {{ .link_text }}</a>
+                {{ end }}
+              </div>
+              <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative order-md-1">
+                <img src="{{ .image | relURL }}" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ else }}
+        <div class="strip" style="background-color: #f5f5f5;">
+          <div class="container row justify-content-start pt-1 pb-1 pt-md-5 pb-md-5">
+            <div class="row justify-content-start">
+              <div class="col-12 col-md-5 col-lg-6">
+                <img src="{{ .image | relURL }}" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);">
+              </div>
+              <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1 text-center text-md-start">
+                <p style="font-size: 20px;">{{ .description }}</p>
+                {{ if .link_b }}
+                <a href="{{ .Params.link | relURL }}" class="button"> {{ .link_text }}</a>
+                {{ end }}       
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ end }}      
+        {{end}}
+    </div>
+  </div>
+</div>
+{{end}}
+
+
+{{ end }}
+
+{{ define "footer_js" }}
+{{ end }}
+
+
