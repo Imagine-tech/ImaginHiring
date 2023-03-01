@@ -1,0 +1,28 @@
+[
+  {
+    "link_b":true,
+    "link": "/",
+    "link_text": "Click now to see all our services in detail.",
+    "description": "At Imagine Hiring, we offer a range of virtual assistant services to help support your business and increase productivity. Our virtual assistants can assist you with lead generation, marketing, appointment setting, sales, customer service, social media management, bookkeeping, administrative tasks, general tasks and other services that you may require.",
+    "image": "images/features/photo_persona.jpg",
+    "image_alignment":"right"
+  },
+  {
+    "link_b":false,
+    "description": "With our easy process and cost-effective pricing starting at $10/hour, you can enjoy flexibility and cost-effectiveness without any hidden fees or long-term contracts. Let us take care of the busywork so you can focus on growing your business.",
+    "image": "images/features/photo_persona.jpg",
+    "image_alignment":"left"
+  },
+  {
+    "link_b":true,
+    "link":"/",
+    "link_text":"Click now to schedule an appointment with us.",
+    "description": "Don't wait any longer! Start scaling your business today by getting in touch with our team. Contact us now and we'll get back to you within 24 hours to understand your needs and help you select the perfect virtual assistant for your business.",
+    "image": "images/features/photo_persona.jpg",
+    "image_alignment":"right"
+  }
+
+  
+
+  
+]
